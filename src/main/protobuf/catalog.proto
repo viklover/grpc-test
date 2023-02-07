@@ -1,0 +1,15 @@
+
+syntax = "proto3";
+
+service PoizonCatalog {
+  rpc NewProduct (Product) returns (Response) {}
+}
+
+message Product {
+  string name = 1;
+  int64 price = 2;
+}
+
+message Response {
+  string message = 1;
+}
